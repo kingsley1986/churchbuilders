@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_06_214127) do
+ActiveRecord::Schema.define(version: 2019_08_07_073853) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "galleries", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image_content_type"
+    t.string "image_file_size"
+  end
 
   create_table "homes", force: :cascade do |t|
     t.datetime "created_at", null: false
