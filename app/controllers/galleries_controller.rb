@@ -24,7 +24,7 @@ class GalleriesController < ApplicationController
   private
 
   def image_params
-    params.require(:image).permit(:image, :title, :description, :image_file_size, :image_content_type)
+    params.require(:gallery).permit(:image, :title, :description, :image_file_size, :image_content_type)
   end
 
 end

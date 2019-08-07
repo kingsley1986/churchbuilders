@@ -15,6 +15,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'pry', '~> 0.12.2'
 gem 'carrierwave'
 gem "mini_magick"
+gem 'activeadmin'
+gem "fog"
+gem "figaro"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
