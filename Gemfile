@@ -15,9 +15,13 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'pry', '~> 0.12.2'
 gem 'carrierwave'
 gem "mini_magick"
+gem 'rmagick'
 gem 'activeadmin'
 gem "fog"
 gem "figaro"
+gem 'ovirt-engine-sdk', '~> 4.2', '>= 4.2.4'
+gem 'fog-core', '~> 2.1', '>= 2.1.2'
+gem 'fog-aws', '~> 3.5', '>= 3.5.2'
 
 
 # front end

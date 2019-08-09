@@ -1,55 +1,78 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!-- css -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!-- <link rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" /> -->
-<!-- <link href="css/bootstrap.min.css" rel="stylesheet" /> -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<!-- For IE -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+		<!-- For Resposive Device -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<body>
-<div id="wrapper" class="home-page">
-	<!-- start header -->
-	<header>
-        <div class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-										<span class="icon-bar page_header">Rccg King of Glory Parish</span>
-                    <a class="navbar-brand" href="/"><img src="/images/rcg.png" style="width:70px; height:70px; border-radius:50%; margin-top:-20px;"></a>
-                </div>
-                <div class="navbar-collapse collapse ">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a class="waves-effect waves-dark" href="/">Home</a></li>
+		<title>BizPro || Responsive html5 template</title>
 
-												<li><a class="waves-effect waves-dark" href="/news">Testimonies</a></li>
-                        <li><a class="waves-effect waves-dark" href="/images">Gallery</a></li>
-                        <li><a class="waves-effect waves-dark" href="/posts">Blog</a></li>
-                        <li><a class="waves-effect waves-dark" href="/pages/filter/contact">Contact</a></li>
-                        <li><a class="waves-effect waves-dark" href="/pages/filter/about">about</a></li>
-												<li class="dropdown">
-													<a href="#" data-toggle="dropdown" class="dropdown-toggle waves-effect waves-dark">Account<b class="caret"></b></a>
-													<ul class="dropdown-menu">
-														<% unless current_user && user_signed_in? %>
-          										<li><a class="waves-effect waves-dark"  href="/sign_up">Sign Up</a></li>
-          										<li><a class="waves-effect waves-dark"  href="/login">Sign In</a></li>
-        										<% end %>
-        										<% if current_user && user_signed_in? %>
-          										<li><a class="waves-effect waves-dark"  href="/logout">Log Out</a></li>
-          										<li><a class="waves-effect waves-dark"  href="/edit">Edit account</a></li>
-        										<% end %>
-													</ul>
-											</li>
-                    </ul>
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" sizes="56x56" href="images/fav-icon/icon.png">
 
-                </div>
-            </div>
-        </div>
-	</header>
-	<!-- end header -->
+
+		<!-- Main style sheet -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<!-- responsive style sheet -->
+		<link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+
+		<!-- Fix Internet Explorer ______________________________________-->
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="vendor/html5shiv.js"></script>
+			<script src="vendor/respond.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<div class="main-page-wrapper">
+
+
+
+			<!--
+			=============================================
+				Theme Header
+			==============================================
+			-->
+			<header class="theme-main-header">
+				<div class="container">
+					<a href="index.html" class="logo float-left tran4s"><img src="images/logo/logo.png" alt="Logo"></a>
+
+					<!-- ========================= Theme Feature Page Menu ======================= -->
+					<nav class="navbar float-right theme-main-menu one-page-menu">
+					   <!-- Brand and toggle get grouped for better mobile display -->
+					   <div class="navbar-header">
+					     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+					       <span class="sr-only">Toggle navigation</span>
+					       Menu
+					       <i class="fa fa-bars" aria-hidden="true"></i>
+					     </button>
+					   </div>
+					   <!-- Collect the nav links, forms, and other content for toggling -->
+					   <div class="collapse navbar-collapse" id="navbar-collapse-1">
+					     <ul class="nav navbar-nav">
+					       	<li class="active"><a href="#home">HOME</a></li>
+							<li><a href="#about-us">ABOUT</a></li>
+							<li><a href="#service-section">SERVICES</a></li>
+							<li><a href="#project-section">PORTFOLIO</a></li>
+							<li><a href="#team-section">TEAM</a></li>
+							<li><a href="#skill-section">Skill</a></li>
+							<li><a href="#our-client">CLIENTS</a></li>
+							<li><a href="#pricing-section">Pricing</a></li>
+							<li class="dropdown-holder"><a href="#blog-section">BLOG</a>
+								<ul class="sub-menu">
+					       			<li><a href="blog-details.html" class="tran3s">Blog Details</a></li>
+					       		</ul>
+							</li>
+							<li><a href="#contact-section">CONTACT</a></li>
+					     </ul>
+					   </div><!-- /.navbar-collapse -->
+					</nav> <!-- /.theme-feature-menu -->
+				</div>
+			</header> <!-- /.theme-main-header -->
