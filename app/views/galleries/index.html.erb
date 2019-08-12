@@ -1,9 +1,1 @@
-<%   @galleries.each_slice(4) do |sliced_and_grouped_galleries| %>
-	<% sliced_and_grouped_galleries.each do |iterating_throuh_galleries| %>
-		<div class="frame",   style: "border-radius: 370px; positon: relative; top:30;">
-  		<%= image_tag(iterating_throuh_galleries.image.url(:square)) %>
 
-  	 	<span><%= iterating_throuh_galleries.description%></span>
-	 	</div>
-	 <% end %>
-<% end %>

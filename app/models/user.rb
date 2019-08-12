@@ -1,8 +1,7 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable
 
          validates :email, presence: true
          validates :password, presence: true
@@ -11,4 +10,22 @@ class User < ApplicationRecord
          validates :last_name, presence: true
          validates :phone, presence: true
          validates :gender, presence: true
+
+         has_many :posts, dependent: :destroy
+         has_many :comments, dependent: :destroy
+         has_many :replies, dependent: :destroy
+         has_many :pictures, dependent: :destroy
+
+
+    before_validation :params_sanitizer, only: :update
+
+  def params_sanitizer
+    if self.roles.to_s.include?("")
+      self.roles.to_s.delete("")
+    end
+  end
+
+  def self.roles_method
+    ['pastor', 'assistant pastor']
+  end
 end

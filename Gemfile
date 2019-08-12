@@ -21,7 +21,19 @@ gem "fog"
 gem "figaro"
 gem 'ovirt-engine-sdk', '~> 4.2', '>= 4.2.4'
 gem 'fog-core', '~> 2.1', '>= 2.1.2'
-gem 'fog-aws', '~> 3.5', '>= 3.5.2'
+
+
+gem 'jquery-turbolinks'
+gem 'will_paginate'
+gem "pundit"
+gem 'mail_form', '~> 1.7', '>= 1.7.1'
+gem 'simple_form', '~> 4.1'
+gem "bourbon"
+gem "recaptcha", require: "recaptcha/rails"
+gem 'autoprefixer-rails'
+gem 'will_paginate'
+gem 'sdoc', '~> 1.0'
+gem "font-awesome-rails"
 
 
 # front end

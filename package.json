@@ -1,5 +1,7 @@
 {
   "name": "churchbuilders",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "lightbox2": "^2.11.1"
+  }
 }

@@ -1,0 +1,31 @@
+<div id="collection_index">
+<li class="span6">
+  <div class="block">
+      <div class="row item_sermon">
+        <h2 class="most_recent_sermon">This is the most recent Sermons</h2>
+        <div class="clear">
+          <% set_sermons.each do |sermon| %>
+            <div class="col-md-6 col-md-offset-3 set_sermon_background" style="position:relative; left:15%;">
+            <% sermon.pictures.each do |pic, remov| %>
+            <table>
+            <tr>
+              <div ><td class="sermon_image"><%=image_tag(pic.image.url(:thumb), class:"sermon_image") if pic.image?  %></td></div>
+              <td>
+                <div ><%= link_to sermon.title, sermon, class:"sermon-title" %></div>
+                <div class="sermon-preacher"><%=sermon.preacher %></div>
+              </br>
+                <div class="sermon-time"> <%=sermon.sermondate.strftime('%d-%b-%Y') unless sermon.sermondate.nil? %></div>
+              </td>
+            </tr>
+            </table>
+            <div><%= link_to 'Read more about this sermon', sermon_path(sermon), class:"btn btn-success sermon_link", style:"color:white; margin-top:-30px; font-family:Georgia, serif" %></div>
+            <% end %>
+            </div>
+          <% end %>
+        <div>
+      </div>
+    </p>
+  </div>
+</li>
+<div class="btn btn-success view-all-sermon"><%=link_to "View All Sermons", sermons_path, id:"view_sermon"%></div>
+</div>

@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <% @sermon.pictures.each do |pic, remov| %>
+    <%= image_tag(pic.image.url(:square), class:"post-img") if pic.image? %>
+  <% end %>
+  <p style="font-size: 25px;text-transform: uppercase;margin:12px;color: #aa5a00;"><%= @sermon.title %></p>
+  <p style="padding-right:20px;font-size:18px"><%= @sermon.body %></p>
+  <div>
+    <span class="sermon_preacher_show"><%= @sermon.preacher %></span>
+    <span class="sermon-time_show"> <%=@sermon.sermondate.strftime('%d-%b-%Y') unless @sermon.sermondate.nil? %></span>
+  </div>
+  <hr class="devidepost">
+  <div class="dropsermonreview" style="background:white;">
+    <div id="sermonreviews">
+      <%= render  @sermon.sermonreviews%>
+    </div>
+    <hr>
+    <h2 style="background:#1e73be; color:white;"> Leave a Comment</h2>
+    <div style="background:silver;">
+    <div class="sermonreviewform" style="background:silver; text-align:center">Your Email will not be published</div>
+      <%= render "sermonreviews/form"%>
+    </div>
+  </div>
+</div>
